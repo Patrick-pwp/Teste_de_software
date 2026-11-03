@@ -1,0 +1,16 @@
+Teste de carga com Apache JMeter 5.6.3 - API do Projeto Integrado (Node + Express + Prisma + PostgreSQL)
+
+Arquivos
+  plano_teste_api.jmx   plano de teste (abrir no JMeter: Arquivo > Abrir)
+  data/cursos.csv       massa de dados do POST /api/cursos
+  data/salas.csv        massa de dados do POST /api/salas
+  resultados/           resultados da execucao (.jtl) e relatorio HTML (abrir relatorio_html/index.html)
+
+Como rodar
+  1. Subir a API (npm run db:up, npm run db:deploy, npm run dev) em http://localhost:3000
+  2. Banco limpo: o plano cadastra registros reais, entao rode contra um banco de DEV zerado
+     (npm run db:reset) ou os cadastros validos voltam 409 na segunda execucao.
+  3. Modo grafico: abrir o .jmx e clicar em Iniciar (botao verde).
+  4. Modo linha de comando:
+       jmeter -n -t plano_teste_api.jmx -l resultados/resultados.jtl -e -o resultados/relatorio_html
+     Outro servidor ou porta:  -Jhost=meu-servidor -Jport=3000

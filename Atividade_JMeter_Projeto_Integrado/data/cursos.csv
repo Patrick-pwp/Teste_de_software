@@ -1,0 +1,11 @@
+codigo;nome;esperado
+ADS;Análise e Desenvolvimento de Sistemas;201
+CC;Ciência da Computação;201
+ENGC;Engenharia da Computação;201
+ADM;Administração;201
+DIR;Direito;201
+BASE;Curso já cadastrado;409
+;Curso sem código;400
+SEM_NOME;;400
+CODIGO-COM-MAIS-DE-20-CARACTERES;Código longo;400
+PSI;Psicologia;201
